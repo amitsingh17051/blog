@@ -1,0 +1,45 @@
+---
+import BaseHeader from "../components/BaseHeader.astro";
+import TopNavigation from "../components/TopNavigation.astro";
+import Footer from "../components/footer.astro";
+const { content } = Astro.props;
+
+---
+
+<html lang="en">
+  <head>
+     <BaseHeader />
+  </head>
+
+  <body>
+    <TopNavigation />
+    <main>
+      <div class="container">
+        <div class="flex flex-grow justify-center min-h-screen">
+          <article class="w-screen max-w-4xl p-8">
+            <h1 class="mb-5 mt-5"> {content.title} </h1>
+            <slot/>
+          </article>  
+        </div>
+        
+      </div>
+    </main>
+    <Footer />
+    
+  </body>
+</html>
+
+
+<style>
+  body {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+    color:var(--body-color) !important;
+	}
+  h1,h2 {
+    font-family: var(--heading-font);
+    color : var(--primary-color);
+  }
+  
+</style>

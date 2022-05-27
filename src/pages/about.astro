@@ -1,0 +1,112 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+title: "about"
+---
+
+<MainLayout>
+	<div class="container">
+		<div class="main mt-5">
+			<h1 class="name">Hello! I'm John.</h1>
+			<p class="sub-text w-50">
+				Welcome to my little place on the internet. I’ve been designing and building websites for a few years. I had the privilege to:
+			</p>
+
+			<ol>
+				<li>Help over 100,000 developers a month through my articles.</li>
+				<li>Make super in-depth courses like Learn JavaScript and Mastering Responsive Typography.</li>
+				<li>Give talks at conferences (like this and this) and workshops in lands far away from where I live (a tiny country called Singapore)</li>
+			</ol>
+		</div>
+
+		<div class="story mt-5">
+			<h1>Here’s a little story of how I got started.</h1>
+			<div class="story-text">
+				<p>People think you need degrees to “make it” as a designer or developer. You don’t. I started with nothing.</p>
+
+				<p>I came from a Finance background. I was afraid to code. <strong>I thought coding was something I would never be good at</strong> (even if I died trying 😨).</p>
+
+				<p>I only started learning to code at 25 years old (one year before I graduated from university) because I didn’t want to work in a bank when I graduated.</p>
+			</div>
+		</div>
+
+		<div class="crazy-part mt-5">
+			<h1>That’s crazy!</h1>
+			<p>Yup! I know! It’s been a hell of a ride. Here’s two more things I never imagined I could do (but I went ahead did them):</p>
+			<p><strong>It’s amazing how far you can go when you don’t stop yourself.</strong> You’re much better than you think you are. This statement is for both of us.</p>
+		</div>
+
+		<div class="help mt-5">
+			<h1>How I can help you.</h1>
+			<p>I taught myself how to design and code. It was HARD. So I understand what you’re battling with: Lots of information and no direction.</p>
+			<p>Don’t worry, I’m here to help.</p>
+			<p>First, <strong>I know a lot about the web</strong> since I’ve worked in it for so long. I constantly reinvent my techniques as new technology appears, and I’m more than happy to share my technqiues with you.</p>
+			<p>Second, <strong>I’m insanely practical.</strong> I only teach techniques and frameworks that I use. If you’re worried about keeping up, just stay along with me and I’ll help filter the important stuff from the fluff.</p>
+		</div>
+
+	
+	</div>
+
+	<div class="contact text-light mb-5 mt-5">
+		<div class="form-section container pt-5 pb-5">
+		
+			<h2 class="mb-2">Contact Us</h2>
+			<form class="">
+				<div class="row d-flex align-items-center ">
+					<div class="col-md-4">
+						<div class="">
+							
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						</div>
+					</div>
+				
+					<div class="col-md-4">
+						<div class="">
+							
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<button type="submit" class="submit-btn">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</MainLayout>
+
+<style is:global >
+p {	
+	font-size: 20px;
+}
+li {
+	font-size: 22px;
+}
+h1,h2 {
+	font-family: var(--heading-font);
+	color : var(--primary-color);
+}
+
+strong {
+	color:var(--secondary-color);
+}
+h1.name {
+	font-size: 55px;
+}
+
+.submit-btn {
+	background:var(--secondary-color);
+	color:var(--secondary-body-color);
+	font-weight:bold;
+	outline: none;
+	border: none;
+	padding: 7px 40px;
+	border-radius: 3px;
+}
+
+.contact {
+	background: var(--primary-bg-clor);
+}
+h1.story, h1.crazy-part {
+	font-size: 28rem;
+}
+</style>

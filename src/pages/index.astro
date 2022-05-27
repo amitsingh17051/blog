@@ -1,0 +1,44 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+	<div class="container main-page ">
+		<main role="main" class="inner cover ">
+			<h1 class="cover-heading">John Doe.</h1>
+			<p class="lead">A strategic approach to website design and development.</p>
+			<p class="lead">
+			<a href="/blog" class="submit-btn btn btn-primary">Learn more</a>
+			</p>
+		</main>
+	</div>
+	<style>
+		.main-page {
+			max-width:800px;
+			margin-top:200px;
+			background: var(--secondary-body-color);
+			padding: 50px 80px;
+			border-radius:10px;
+		}
+		.submit-btn {
+			background: var(--secondary-color);
+			border:none;
+		}
+		.cover-heading {
+			font-size: 50px;
+			color:var(--secondary-color);
+		}
+		h1,h2 {
+			font-family: var(--heading-font);
+			
+		}
+
+		body {
+			background: -webkit-linear-gradient(45deg, var(--primary-color), var(--secondary-color) 80%);
+		}
+	</style>
+
+</MainLayout
+
+
+
