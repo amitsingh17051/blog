@@ -1,22 +1,21 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+import BlogHeader from "../components/BlogHeader.astro";
+import BlogContent from "../components/BlogContent.astro";
 ---
 
 <MainLayout>
 	<div class="container main-page ">
 		<main role="main" class="inner cover ">
-			<h1 class="cover-heading">John Doe.</h1>
-			<p class="lead">A strategic approach to website design and development.</p>
-			<p class="lead">
-			<a href="/blog" class="submit-btn btn btn-primary">Learn more</a>
-			</p>
+			
 		</main>
 	</div>
 	<style>
 		.main-page {
 			max-width:800px;
 			margin-top:200px;
-			background: var(--secondary-body-color);
+			background: var(--primary-color);
 			padding: 50px 80px;
 			border-radius:10px;
 		}

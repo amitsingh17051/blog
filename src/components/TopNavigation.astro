@@ -1,7 +1,7 @@
 ---
   var CurrentPage = Astro.canonicalURL.pathname;
 ---
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-none">
   <div class="container-fluid container p-2">
     <a class="navbar-brand" href="#">Hello.</a>
 <!-- 
@@ -12,8 +12,8 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link ${ CurrentPage == '/' ? 'active' : '' }" aria-current="page" href="/">Home</a>
         </li>
@@ -23,72 +23,48 @@
         <li class="nav-item">
           <a class="nav-link ${ CurrentPage == '/about/' ? 'active' : '' }" href="/about">About</a>
         </li>
-        
       </ul>
+      
+      <div class="navbar-text social-icon">
+        <ul class="d-flex list-unstyled">
+          <li><i class="fa-brands fa-github"></i></li>
+          <li><i class="fa-brands fa-linkedin"></i></li>
+          <li><i class="fa-brands fa-twitter-square"></i></li>
+        </ul>
+      </div>
     </div>
-    
   </div>
 </nav>
 
 <script>
-  // var customColors = {
-  //   int: function() {
-      
-  //   }
-  // }
-
-  // var root = document.querySelector(':root');
-  // root.style.setProperty('--secondary-color', getCookie('customColor'));
-  // root.style.setProperty('--primary-color', getCookie('customColorPrimary'));
-
-  // document.querySelector('#custom-color').value = getCookie('customColor');
-  // document.querySelector('#custom-color-primary').value = getCookie('customColorPrimary');
-
-  // var customeColor =  document.querySelector('#custom-color');
-  // customeColor.addEventListener('input', () => {
-  //   var customeColorValue =  document.querySelector('#custom-color').value;
-  //   root.style.setProperty('--secondary-color', customeColorValue);
-  //   document.cookie = "customColor="+customeColorValue+"; expires=Thu, 18 Dec 2023 12:00:00 UTC";
-  // })
-  // var customeColorPimary =  document.querySelector('#custom-color-primary');
-  // customeColorPimary.addEventListener('input', () => {
-  //   var customeColorPrimaryValue =  document.querySelector('#custom-color-primary').value;
-  //   root.style.setProperty('--primary-color', customeColorPrimaryValue);
-  //   document.cookie = "customColorPrimary="+customeColorPrimaryValue+"; expires=Thu, 18 Dec 2023 12:00:00 UTC";
-  // })
-  // function getCookie(name) {
-  //     var nameEQ = name + "=";
-  //     var ca = document.cookie.split(';');
-  //     for(var i=0;i < ca.length;i++) {
-  //         var c = ca[i];
-  //         while (c.charAt(0)==' ') c = c.substring(1,c.length);
-  //         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-  //     }
-
-  //     if(name == 'customColorPrimary') {
-  //       return '#931b15';
-  //     }
-  //     return '#1770ec';
-  // }
+  
 </script>
 
 <style>
 
 :root {
-  --primary-color: #931b15;
-  --secondary-color: #1770ec;
+  --primary-color: #f8dfdb;
+  --secondary-color: #fc221c;
   --body-color:#111;
-  --secondary-body-color:#fff;
   --heading-font: 'Prata', serif;
-  --primary-bg-clor: #ccc;
-  --primary-bg-clor: #111;
 }
 
+.social-icon li {
+  margin-left:20px;
+  font-size:20px;
+} 
+
+#navbarText {
+  display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.social-icon i {
+  color:var(--body-color);
+} 
 .navbar-brand {
   font-size: 32px;
-  background: -webkit-linear-gradient(45deg, var(--primary-color), var(--secondary-color) 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color:var(--body-color);
 }
 
 #custom-color {
@@ -97,11 +73,12 @@
 
 .nav-link {
   font-size: 18px;
+  margin-left:20px;
 }
 .nav-link.active {
-	color:var(--secondary-color);
+	border-bottom: 1px solid var(--body-color);
 }
 .nav-link:hover {
-	color:var(--secondary-color);
+	color:var(--body-color);
 }
 </style>
