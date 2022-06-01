@@ -2,6 +2,7 @@
 import BaseHeader from "../components/BaseHeader.astro";
 import TopNavigation from "../components/TopNavigation.astro";
 import Footer from "../components/footer.astro";
+import ContactForm from "../components/ContactForm.astro";
 const { content } = Astro.props;
 
 ---
@@ -17,13 +18,16 @@ const { content } = Astro.props;
       <div class="container">
         <div class="flex flex-grow justify-center min-h-screen">
           <article class="w-screen max-w-4xl p-8">
-            <h1 class="mb-5 mt-5"> {content.title} </h1>
+            <p class="mt-5 text-center">{content.publishedDate}</p>
+
+            <h1 class="mb-5 text-center"> {content.title} </h1>
             <slot/>
           </article>  
         </div>
         
       </div>
     </main>
+    <ContactForm />
     <Footer />
     
   </body>
@@ -36,10 +40,11 @@ const { content } = Astro.props;
 		flex-direction: column;
 		min-height: 100vh;
     color:var(--body-color) !important;
+    background: var(--primary-color);
 	}
   h1,h2 {
     font-family: var(--heading-font);
-    color : var(--primary-color);
+    color : var(--body-color);
   }
   
 </style>

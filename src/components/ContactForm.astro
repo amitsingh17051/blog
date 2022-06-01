@@ -1,0 +1,59 @@
+---
+import BaseHeader from "../components/BaseHeader.astro";
+import TopNavigation from "../components/TopNavigation.astro";
+import Footer from "../components/footer.astro";
+---
+
+<div class="contact text-light">
+    <div class="form-section container">
+    
+        <h1 class="mb-2 text-center pb-3">Subscribe to our newsletter.
+        </h1>
+        <p class="text-center  pb-2">Sign up with your email address to receive news and updates</p>
+        <form class="">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    .contact{
+		background: white;
+		padding : 100px 0px;
+	}
+	.form-section h1, .form-section p {
+		color:var(--secondary-color)
+	}
+
+	.form-section button {
+		width:100%;
+		padding:10px;
+		border: 2px solid var(--secondary-color);
+		background:var(--secondary-color);
+		font-weight: bold;
+	}
+	
+	.form-section button:hover {
+		background-color: white;
+		
+		color:var(--secondary-color);
+	}
+	.form-section input {
+		padding:10px;
+		
+	}
+</style>

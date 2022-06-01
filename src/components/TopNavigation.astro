@@ -1,5 +1,6 @@
 ---
   var CurrentPage = Astro.canonicalURL.pathname;
+  console.log(CurrentPage)
 ---
 <nav class="navbar navbar-expand-lg bg-none">
   <div class="container-fluid container p-2">
@@ -18,7 +19,7 @@
           <a class="nav-link ${ CurrentPage == '/' ? 'active' : '' }" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ${ CurrentPage == '/blog/' ? 'active' : '' }" href="/blog">Blog</a>
+          <a class="nav-link ${ (CurrentPage == '/blog/' || CurrentPage.includes('posts')) ? 'active' : '' }" href="/blog">Blog</a>
         </li>
         <li class="nav-item">
           <a class="nav-link ${ CurrentPage == '/about/' ? 'active' : '' }" href="/about">About</a>
@@ -61,6 +62,10 @@
 }
 .social-icon i {
   color:var(--body-color);
+} 
+.social-icon i:hover {
+  color:var(--secondary-color);
+  cursor: pointer;
 } 
 .navbar-brand {
   font-size: 32px;

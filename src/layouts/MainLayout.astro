@@ -65,10 +65,18 @@ import Footer from "../components/footer.astro";
 	.form-section button {
 		width:100%;
 		padding:10px;
-		background:var(--secondary-color)
+		border: 2px solid var(--secondary-color);
+		background:var(--secondary-color);
+		font-weight: bold;
 	}
 	
+	.form-section button:hover {
+		background-color: white;
+		
+		color:var(--secondary-color);
+	}
 	.form-section input {
 		padding:10px;
+		
 	}
 </style>
