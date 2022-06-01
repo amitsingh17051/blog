@@ -4,11 +4,11 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid container p-2">
     <a class="navbar-brand" href="#">Hello.</a>
-
+<!-- 
       Select You Custome Color 
       <input id="custom-color" type="color" />
       <input id="custom-color-primary" type="color" />
-       
+        -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,45 +31,45 @@
 </nav>
 
 <script>
-  var customColors = {
-    int: function() {
+  // var customColors = {
+  //   int: function() {
       
-    }
-  }
+  //   }
+  // }
 
-  var root = document.querySelector(':root');
-  root.style.setProperty('--secondary-color', getCookie('customColor'));
-  root.style.setProperty('--primary-color', getCookie('customColorPrimary'));
+  // var root = document.querySelector(':root');
+  // root.style.setProperty('--secondary-color', getCookie('customColor'));
+  // root.style.setProperty('--primary-color', getCookie('customColorPrimary'));
 
-  document.querySelector('#custom-color').value = getCookie('customColor');
-  document.querySelector('#custom-color-primary').value = getCookie('customColorPrimary');
+  // document.querySelector('#custom-color').value = getCookie('customColor');
+  // document.querySelector('#custom-color-primary').value = getCookie('customColorPrimary');
 
-  var customeColor =  document.querySelector('#custom-color');
-  customeColor.addEventListener('input', () => {
-    var customeColorValue =  document.querySelector('#custom-color').value;
-    root.style.setProperty('--secondary-color', customeColorValue);
-    document.cookie = "customColor="+customeColorValue+"; expires=Thu, 18 Dec 2023 12:00:00 UTC";
-  })
-  var customeColorPimary =  document.querySelector('#custom-color-primary');
-  customeColorPimary.addEventListener('input', () => {
-    var customeColorPrimaryValue =  document.querySelector('#custom-color-primary').value;
-    root.style.setProperty('--primary-color', customeColorPrimaryValue);
-    document.cookie = "customColorPrimary="+customeColorPrimaryValue+"; expires=Thu, 18 Dec 2023 12:00:00 UTC";
-  })
-  function getCookie(name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for(var i=0;i < ca.length;i++) {
-          var c = ca[i];
-          while (c.charAt(0)==' ') c = c.substring(1,c.length);
-          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-      }
+  // var customeColor =  document.querySelector('#custom-color');
+  // customeColor.addEventListener('input', () => {
+  //   var customeColorValue =  document.querySelector('#custom-color').value;
+  //   root.style.setProperty('--secondary-color', customeColorValue);
+  //   document.cookie = "customColor="+customeColorValue+"; expires=Thu, 18 Dec 2023 12:00:00 UTC";
+  // })
+  // var customeColorPimary =  document.querySelector('#custom-color-primary');
+  // customeColorPimary.addEventListener('input', () => {
+  //   var customeColorPrimaryValue =  document.querySelector('#custom-color-primary').value;
+  //   root.style.setProperty('--primary-color', customeColorPrimaryValue);
+  //   document.cookie = "customColorPrimary="+customeColorPrimaryValue+"; expires=Thu, 18 Dec 2023 12:00:00 UTC";
+  // })
+  // function getCookie(name) {
+  //     var nameEQ = name + "=";
+  //     var ca = document.cookie.split(';');
+  //     for(var i=0;i < ca.length;i++) {
+  //         var c = ca[i];
+  //         while (c.charAt(0)==' ') c = c.substring(1,c.length);
+  //         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  //     }
 
-      if(name == 'customColorPrimary') {
-        return '#931b15';
-      }
-      return '#1770ec';
-  }
+  //     if(name == 'customColorPrimary') {
+  //       return '#931b15';
+  //     }
+  //     return '#1770ec';
+  // }
 </script>
 
 <style>
