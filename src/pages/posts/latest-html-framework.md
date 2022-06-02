@@ -1,9 +1,9 @@
 ---
-title: "Latest Js Framework"
-slug: latest-js-framewrok
+title: "Latest html Framework"
+slug: latest-html-framework
 published: true
-publishedDate: '2019-05-04 02:00 PM CST'
-description: 'How To know best javascript framework for you'
+publishedDate: '2019-05-04 03:00 PM CST'
+description: 'How To know best html framework for you'
 layout: ../../layouts/PostLayout.astro
 output: 
   html_document:

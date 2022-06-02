@@ -3,6 +3,7 @@ import BaseHeader from "../components/BaseHeader.astro";
 import TopNavigation from "../components/TopNavigation.astro";
 import Footer from "../components/footer.astro";
 import ContactForm from "../components/ContactForm.astro";
+import BlogSidebar from "../components/BlogSidebar.astro"
 const { content } = Astro.props;
 
 ---
@@ -19,12 +20,18 @@ const { content } = Astro.props;
         <div class="flex flex-grow justify-center min-h-screen">
           <article class="w-screen max-w-4xl p-8">
             <p class="mt-5 text-center">{content.publishedDate}</p>
-
             <h1 class="mb-5 text-center"> {content.title} </h1>
-            <slot/>
+            <div class="row">
+              <div class="col-md-9">
+                <slot/>
+              </div>
+              <div class="col-md-3">
+                <BlogSidebar />
+              </div>
+            </div>
+           
           </article>  
         </div>
-        
       </div>
     </main>
     <ContactForm />

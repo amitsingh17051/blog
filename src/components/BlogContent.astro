@@ -1,20 +1,26 @@
 ---
 import Posts from "./Posts.astro";
+import BlogSidebar from "./BlogSidebar.astro";
 ---
 
 <section class="blog-content mt-5 mb-5">
     <div class="container">
-        <div class="blog-header">
-        <h1></h1>
+        <div class="row">
+            <div class="col-md-8">
+                <Posts />
+            </div>
+            <div class="col-md-4">
+                <BlogSidebar />
+            </div>
         </div>
-        <Posts />
+        
     </div>
 </section>
 
 <style>
-.blog-content h1{
-	font-size:3rem;
-}
 
+.blog-content {
+    margin-top:100px;
+}
 
 </style>
