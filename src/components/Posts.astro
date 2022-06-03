@@ -3,7 +3,7 @@
 
 let allPosts = await Astro.glob('../pages/posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishedDate).valueOf() - new Date(a.frontmatter.publishedDate).valueOf());
-console.log(allPosts)
+
 
 ---
 
