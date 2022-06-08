@@ -1,36 +1,53 @@
 ---
 import Subscription from "./Subscription";
-
-import BaseHeader from "../components/BaseHeader.astro";
-import TopNavigation from "../components/TopNavigation.astro";
-import Footer from "../components/footer.astro";
 ---
 
 <div class="contact text-light">
     <div class="form-section container">
-        <Subscription client:idle />
+       
         <h1 class="mb-2 text-center pb-3">Subscribe to our newsletter.
         </h1>
         <p class="text-center  pb-2">Sign up with your email address to receive news and updates</p>
-        <form class="">
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="">
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+     
+
+          <!-- Begin Mailchimp Signup Form -->
+          
+          <div id="mc_embed_signup">
+            
+              <form action="https://app.us18.list-manage.com/subscribe/post?u=214873f412f614d5534071bc6&amp;id=30d7cfc65a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+               
+                        <div id="mc_embed_signup_scroll">
+                      
+                            <div id="mce-responses" class="clear foot">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div> 
+                            
+                            <div class="mc-field-group form-group">
+                            <input type="email" value="" name="EMAIL" class=" form-control required email" id="mce-EMAIL">
                             </div>
-                        </div>
-                    
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                                
+                            
+    
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_214873f412f614d5534071bc6_30d7cfc65a" tabindex="-1" value=""></div>
+                            <div class="optionalParent">
+                                <div class="clear foot">
+                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary">
+                                </div>
+                            </div>
+                        
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+              </form>
+          </div>
+          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+          <!--End mc_embed_signup-->
+
     </div>
 </div>
+
 
 <style>
     .contact{
@@ -38,16 +55,39 @@ import Footer from "../components/footer.astro";
 		padding : 100px 0px;
 	}
 	.form-section h1, .form-section p {
-		color:var(--secondary-color)
-	}
+		color:var(--secondary-color);
+        font-family: var(--heading-font);
+    }
+    
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-	.form-section button {
+    #mce-responses div {
+        text-align:center;
+    }
+    .mc-field-group {
+        width: 400px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+	.form-section .btn-primary {
 		width:100%;
 		padding:10px;
 		border: 2px solid var(--secondary-color);
 		background:var(--secondary-color);
 		font-weight: bold;
 	}
+
+    #mce-error-response {
+        color:red;
+    }
+
+    #mce-success-response {
+        color:var(--secondary-color);;
+    }
 	
 	.form-section button:hover {
 		background-color: white;

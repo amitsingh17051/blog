@@ -9,9 +9,7 @@ export default function FrontImageslider(props) {
 
     const postsLength = props.posts.length - 1;
 
-    createEffect( () => {
-       
-    })
+
 
     setInterval(() => {
         currentSlide() == postsLength ? setCurrentSlider(0) : setCurrentSlider(currentSlide() + 1)
