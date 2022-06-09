@@ -1,0 +1,56 @@
+---
+let allPosts = await Astro.glob('../pages/posts/*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishedDate).valueOf() - new Date(a.frontmatter.publishedDate).valueOf());
+---
+
+
+<div class="front-post-container bg-white ">
+
+    <div class="container ">
+        <h1>Latest Posts</h1>
+        <div class="posts-container">
+            {allPosts.map(post => {
+            return (
+                <div class="py-4 post-container">
+                
+                <a href={'/posts/' + post.frontmatter.slug}><img src="https://cdn.pixabay.com/photo/2014/12/30/13/44/programming-583923_960_720.jpg" width="100%" alt="" /></a>
+                <p class="post-category">Dev Category - {post.frontmatter.publishedDate}</p>
+                <h4><a href={'/posts/' + post.frontmatter.slug} class="post-link">{post.frontmatter.title}</a></h4>
+                
+                <span class="text-muted">{post.frontmatter.description}</span>
+                </div>
+            );
+            })}
+        </div>
+    </div>
+  </div>
+
+  <style>
+
+      .front-post-container .container {
+          margin-top:150px;
+          margin-bottom:150px;
+      }
+      .front-post-container h1 {
+        font-family: var(--heading-font);
+      }
+      .posts-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap:20px;
+      }
+      .posts-container img {
+          border-radius:7px;
+      }
+      .posts-container a {
+        text-decoration: none;
+        color:var(--body-color);
+      }
+
+      .posts-container p {
+          font-size: 12px;
+          opacity:0.8;
+          margin-top:20px;
+          margin-bottom:0px;
+      }
+  </style>

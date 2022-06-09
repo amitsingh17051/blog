@@ -1,12 +1,7 @@
 ---
-
 import FrontImageSlider from "../components/FrontImageSlider";
-
 import MainLayout from "../layouts/MainLayout.astro";
-
-import BlogHeader from "../components/BlogHeader.astro";
-import BlogContent from "../components/BlogContent.astro";
-
+import FrontBlogPosts from "../components/FrontBlogPosts.astro";
 let allPosts = await Astro.glob('../pages/posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishedDate).valueOf() - new Date(a.frontmatter.publishedDate).valueOf());
 ---
@@ -17,6 +12,12 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishedDate).valueOf
 			<FrontImageSlider posts={allPosts} client:idle  />
 		</main>
 	</div>
+	<FrontBlogPosts />
+	<div class="container p-5">
+		<h1>Most Popular Posts</h1>
+		<FrontImageSlider posts={allPosts} client:idle  />
+	</div>
+	
 	<style>
 		.main-page {
 
@@ -41,7 +42,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishedDate).valueOf
 		} */
 	</style>
 
-</MainLayout
+</MainLayout>
 
 
 
