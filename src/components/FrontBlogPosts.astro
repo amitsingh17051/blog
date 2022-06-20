@@ -4,10 +4,14 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishedDate).valueOf
 ---
 
 
-<div class="front-post-container bg-white ">
+<div class="front-post-container">
 
-    <div class="container ">
-        <h1>Latest Posts</h1>
+    <div class="container">
+        <h1 class="">Latest Posts</h1>
+        <p>Laboriosam impedit dolores expedita animi. Unde eveniet voluptate velit ratione harum quia at dolorum ullam esse et? <br> 
+            Unde eveniet voluptate velit ratione harum quia at dolorum ullam esse et? 
+        </p>
+        
         <div class="posts-container">
             {allPosts.map(post => {
             return (
@@ -15,9 +19,10 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishedDate).valueOf
                 
                 <a href={'/posts/' + post.frontmatter.slug}><img src="https://cdn.pixabay.com/photo/2014/12/30/13/44/programming-583923_960_720.jpg" width="100%" alt="" /></a>
                 <p class="post-category">Dev Category - {post.frontmatter.publishedDate}</p>
-                <h4><a href={'/posts/' + post.frontmatter.slug} class="post-link">{post.frontmatter.title}</a></h4>
-                
+                <h4><a href={'/posts/' + post.frontmatter.slug} class="post-link">{post.frontmatter.title}</a></h4>  
                 <span class="text-muted">{post.frontmatter.description}</span>
+                <br/>
+                <a href={'/posts/' + post.frontmatter.slug} class="btn btn-sm btn-secondary mt-2">Read More</a>
                 </div>
             );
             })}
@@ -53,4 +58,11 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishedDate).valueOf
           margin-top:20px;
           margin-bottom:0px;
       }
+      .btn-secondary {
+        background-color: var(--secondary-color);
+        padding:5px 20px;
+        color: white !important;
+        font-weight: 600;
+      }
+      
   </style>

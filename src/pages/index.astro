@@ -9,19 +9,16 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishedDate).valueOf
 <MainLayout>
 	<div class="container main-page ">
 		<main role="main" class="inner cover ">
-			<FrontImageSlider posts={allPosts} client:idle  />
+			<FrontBlogPosts />
 		</main>
 	</div>
-	<FrontBlogPosts />
-	<div class="container p-5">
-		<h1>Most Popular Posts</h1>
-		<FrontImageSlider posts={allPosts} client:idle  />
-	</div>
+	
+	
 	
 	<style>
 		.main-page {
 
-			padding: 50px 20px;
+			padding: 10px 20px;
 			border-radius:10px;
 		}
 		.submit-btn {
